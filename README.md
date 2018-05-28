@@ -1,2 +1,1 @@
-# simple-payload-generator
-SPG: Simple MSFVenom Payload Generator
+<h1 align="center">Simple Payload Generator</h1>
