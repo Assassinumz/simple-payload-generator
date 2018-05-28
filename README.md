@@ -5,7 +5,7 @@
 
 ## Disclaimer
 <p align="center">
-  This tool was created only for learning purpose only.
+  #### This tool was created for learning purposes only
 </p>
 
 THIS SOFTWARE IS PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND. YOU MAY USE THIS SOFTWARE AT YOUR OWN RISK. The use of this software (Simple Payload Generaot) is COMPLETE RESPONSIBILITY of the END-USER. Developers assume NO liability and are NOT responsible for any misuse or damage caused by this program.
@@ -20,15 +20,15 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. Taken from 
 
 ## PREREQUISITES
 * Python 2.7
-* [Metasploit-Frameword](https://github.com/rapid7/metasploit-framework)
+* [Metasploit-Framework](https://github.com/rapid7/metasploit-framework)
 
 ## TESTED ON
 * Kali Linux - Rolling Edition
 
 ## INSTALLATION
-'''
+```
 git clone https://github.com/Assassinumz/simple-payload-generator.git
 cd simple-payload-generator
 python spg.py
-'''
+```
 
