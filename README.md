@@ -1,11 +1,11 @@
 <h1 align="center">Simple Payload Generator</h1>
 <p align="center">
-  Simple Payload Generator (SPG) simplifies the job of creating payloads with MSFVenom
+  *Simple Payload Generator (SPG) simplifies the job of creating payloads with MSFVenom*
 </p>
 
 ## Disclaimer
 <p align="center">
-  #### This tool was created for learning purposes only
+  This tool was created for learning purposes only
 </p>
 
 THIS SOFTWARE IS PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND. YOU MAY USE THIS SOFTWARE AT YOUR OWN RISK. The use of this software (Simple Payload Generaot) is COMPLETE RESPONSIBILITY of the END-USER. Developers assume NO liability and are NOT responsible for any misuse or damage caused by this program.
