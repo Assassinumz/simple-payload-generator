@@ -3,7 +3,7 @@
   Simple Payload Generator (SPG) simplifies the job of creating payloads with MSFVenom
 </p>
 
-## Disclaimer
+## DISCLAIMER
 <p align="center">
   TO BE USED FOR LEARNING PURPOSES ONLY
 </p>
