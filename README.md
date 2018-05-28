@@ -1,14 +1,14 @@
 <h1 align="center">Simple Payload Generator</h1>
 <p align="center">
-  **Simple Payload Generator (SPG) simplifies the job of creating payloads with MSFVenom**
+  Simple Payload Generator (SPG) simplifies the job of creating payloads with MSFVenom
 </p>
 
 ## Disclaimer
 <p align="center">
-  This tool was created for learning purposes only
+  TO BE USED FOR LEARNING PURPOSES ONLY
 </p>
 
-THIS SOFTWARE IS PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND. YOU MAY USE THIS SOFTWARE AT YOUR OWN RISK. The use of this software (Simple Payload Generaot) is COMPLETE RESPONSIBILITY of the END-USER. Developers assume NO liability and are NOT responsible for any misuse or damage caused by this program.
+THIS SOFTWARE IS PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND. YOU MAY USE THIS SOFTWARE AT YOUR OWN RISK. The use of this software Simple Payload Generator(SPG) is COMPLETE RESPONSIBILITY of the END-USER. Developers assume NO liability and are NOT responsible for any misuse or damage caused by this program.
 
 IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
 FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
@@ -23,7 +23,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. Taken from 
 * [Metasploit-Framework](https://github.com/rapid7/metasploit-framework)
 
 ## TESTED ON
-* Kali Linux - Rolling Edition
+* **Kali Linux - Rolling Edition**
 
 ## INSTALLATION
 ```
@@ -31,4 +31,26 @@ git clone https://github.com/Assassinumz/simple-payload-generator.git
 cd simple-payload-generator
 python spg.py
 ```
+## AVALAIBLE PAYLOADS
 
+#### Windows
+* windows/meterpreter/reverse_http
+* windows/meterpreter/reverse_https
+* windows/meterpreter/reverse_tcp
+
+#### Linux
+* linux/x86/shell/reverse_tcp
+* linux/x86/meterpreter/reverse_tcp
+
+#### Android
+* android/meterpreter/reverse_http
+* android/meterpreter/reverse_https
+* android/meterpreter/reverse_tcp
+
+#### Python
+* python/meterpreter/reverse_http
+* python/meterpreter/reverse_https
+* python/meterpreter/reverse_tcp
+
+#### PHP
+* php/meterprter/reverse_tcp
