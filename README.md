@@ -31,6 +31,10 @@ git clone https://github.com/Assassinumz/simple-payload-generator.git
 cd simple-payload-generator
 python spg.py
 ```
+
+## VIDEO TUTORIAL
+![spg](https://youtu.be/xPR_Wyb-Dnk)
+
 ## AVALAIBLE PAYLOADS
 
 #### Windows
