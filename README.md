@@ -34,7 +34,7 @@ python spg.py
 
 ## VIDEO TUTORIAL
 <div align="center">
-    <a href="https://youtu.be/xPR_Wyb-Dnk"><img src="http://pixiters.ga/wp-content/uploads/2018/05/spg.png" width="400px"</img></a>
+    <a href="https://youtu.be/xPR_Wyb-Dnk"><img src="http://pixiters.ga/wp-content/uploads/2018/05/spg.png"</img></a>
 </div>
 
 ## AVALAIBLE PAYLOADS
