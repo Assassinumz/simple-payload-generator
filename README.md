@@ -68,7 +68,7 @@ python spg.py
 
 <div  align="center">
 
-<a  href="https://youtu.be/xPR_Wyb-Dnk"><img  src="screenshot.png"</img></a>
+<a  href="https://youtu.be/xPR_Wyb-Dnk"><img  src="screenshot.png" alt="Tutorial"></a>
 
 </div>
 
