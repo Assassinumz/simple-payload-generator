@@ -7,9 +7,13 @@
 
 </p>
 
+
 <p align="center">
-[![Python](https://img.shields.io/badge/Language-Python-#069ADC.svg)](https://www.python.org/) [![Discord](https://img.shields.io/discord/264666918034604032.svg?color=%237289DA&label=Discord&style=popout-square)][https://discord.gg/3nfQadt]
+  <a href="https://discord.gg/3nfQadt">
+    <img src="https://img.shields.io/discord/264666918034604032.svg?color=%237289DA&label=Discord&style=popout-square" alt="Discord Server">
+  </a>
 </p>
+
 
 ## DISCLAIMER
 
