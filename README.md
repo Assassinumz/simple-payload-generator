@@ -2,17 +2,14 @@
 <h1  align="center">Simple Payload Generator</h1>
 
 <p  align="center">
-
-**Simple Payload Generator (SPG) simplifies the job of creating payloads with MSFVenom**
-
+ Simple Payload Generator (SPG) simplifies the job of creating payloads with MSFVenom
 </p>
-
 
 <p align="center">
   <a href="https://discord.gg/3nfQadt">
     <img src="https://img.shields.io/discord/264666918034604032.svg?color=%237289DA&label=Discord&style=popout-square" alt="Discord Server">
   </a>
-</p>
+  </p>
 
 
 ## DISCLAIMER
